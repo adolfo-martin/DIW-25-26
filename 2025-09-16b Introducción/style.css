@@ -1,0 +1,20 @@
+body {
+    background-color: #f4e0c5;
+    background-image: url(./patron.avif);
+    /* background-repeat: no-repeat; */
+    color: red;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    background-color: #00008be0;
+    font-size: 2rem;
+    color: gold;
+    list-style-type: square;
+    list-style-position: outside;
+    list-style-image: url(./corazon-verde.png);
+}
