@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de selectores</title>
+
+    <style>
+        body {
+            background-color: bisque;
+        }
+
+        ol {
+            list-style-type: upper-roman;
+        }
+
+        h1 {
+            background-color: aqua;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #parrafo2 {
+            color: red;
+            font-weight: bold;
+        }
+
+        p#parrafo4 {
+            color: green;
+        }
+
+        h1#parrafo4 {
+            color: blue;
+        }
+
+        .primeros {
+            color: chartreuse !important;
+            text-decoration: underline;
+        }
+
+        .ultimos {
+            color: magenta;
+            text-decoration: line-through;
+        }
+
+        p.ultimos {
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tipos de selectores</h1>
+    
+    <ol>
+        <li>Selectores de tipo etiqueta (tag)</li>
+        <li>Selectores de tipo identificador (id)</li>
+        <li>Selectores de tipo clase (class)</li>
+    </ol>
+
+    <h1 class="ultimos">Datos de ejemplo</h1>
+
+    <p id="parrafo1" class="primeros">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quisquam?</p>
+    <p id="parrafo2" class="primeros">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quisquam?</p>
+    <p id="parrafo3" class="primeros">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quisquam?</p>
+    <p id="parrafo4" class="primeros">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quisquam?</p>
+    <p id="parrafo5" class="primeros">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quisquam?</p>
+    <p id="parrafo6" class="ultimos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quisquam?</p>
+    <p id="parrafo7" class="ultimos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quisquam?</p>
+    <p id="parrafo8" class="ultimos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quisquam?</p>
+    <p id="parrafo9" class="ultimos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quisquam?</p>
+    <p id="parrafo10" class="ultimos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quisquam?</p>
+</body>
+</html>

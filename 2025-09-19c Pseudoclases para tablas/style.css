@@ -1,0 +1,52 @@
+:root {
+    font-size: 32px;
+}
+
+table, th, td {
+    border: solid 2px blue;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0.25rem;
+}
+
+/* tr:first-child {
+    background-color: cyan;
+}
+
+tr:last-child {
+    background-color: blue;
+} */
+
+/* tr:nth-child(3n+1) {
+    background-color: bisque;
+}
+
+tr:nth-child(3n+2) {
+    background-color: chartreuse;
+}
+
+tr:nth-child(3n+3) {
+    background-color: cyan;
+} */
+
+tr:first-child {
+    background-color: blue !important;
+    color: white;
+}
+
+tr:nth-child(2n+1) {
+    background-color: darkgrey;
+}
+
+tr:nth-child(2n) {
+    background-color: lightgray;
+}
+
+tr:nth-child(2n+1):hover,
+tr:nth-child(2n):hover {
+    background-color: grey;
+    font-weight: bold;
+}
+

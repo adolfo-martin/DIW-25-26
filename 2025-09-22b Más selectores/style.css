@@ -1,0 +1,78 @@
+/* Siempre vamos a empezar con este bloque de código */
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/* El asterisco representa todas las etiquetas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: lightblue;
+}
+
+h1 {
+    border: solid 10px black;
+    margin: 40px;
+    width: 500px;
+}
+
+/* #: selector de identificador */
+#parrafo1 {
+    color: chocolate;
+}
+
+/* .: selector de clase */
+.parrafo-negrita {
+    font-weight: bold;
+    font-style: italic; /* cursiva, letras inclinadas */
+}
+
+p#parrafo1.parrafo-negrita {
+    color: green;
+    text-decoration: line-through;
+    text-transform: capitalize;
+}
+
+*.parrafo-negrita {
+    color: darkmagenta;
+    text-decoration: underline;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Un espacio entre dos selectores indica descendencia */
+div p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* >: representa la relación hijo */
+div>p {
+    color: gold;
+}
+
+/* +: representa el primer hermano (adjacent sibling) */
+#parrafo2+p {
+    color: red;
+}
+
+/* ~: representa los hermanos siguientes (next sibling) */
+#parrafo5~p {
+    color: green;
+}
+
+/* []: representan un atributo */
+[disabled] {
+    color: transparent;
+}
+
+div[data-inventado=si] {
+    font-size: 5rem;
+}

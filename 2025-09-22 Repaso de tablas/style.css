@@ -1,0 +1,22 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+table, th, td {
+    border: solid 0.2rem black;
+    border-collapse: collapse;
+}
+
+thead, tfoot {
+    background-color: green;
+    color: white;
+}
+
+th::first-letter {
+    text-transform: uppercase;
+    color: red;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif
+}
+
