@@ -1,0 +1,51 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    /* variables CSS */
+    --color-oscuro: #020268;
+    --color-medio: #0000ff;
+    --color-claro: #add8e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: var(--color-oscuro);
+    color: white;
+}
+
+header {
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.25rem;
+}
+
+nav {
+    background-color: var(--color-medio);
+}
+
+label[for=tChkMenu] {
+    font-size: 2rem;
+    background-color: var(--color-claro);
+    color: var(--color-oscuro);
+    rotate: 0.25turn;
+    position: absolute;
+    left: 1rem;
+}
+
+#tChkMenu {
+    display: none;
+}
+
+#tChkMenu:not(:checked) + nav {
+    display: none;
+}
+
+a {
+    color: var(--color-claro);
+    text-decoration: none;
+}
