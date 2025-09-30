@@ -1,0 +1,41 @@
+.caja-externa {
+    background-color: blue;
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.caja-interna {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    /* left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; */
+    inset: 0;
+    margin: auto;
+}
+
+
+.circulo-externo {
+    background-color: red;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    z-index: -1;
+}
+
+.circulo-interno {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    border-radius: inherit;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}

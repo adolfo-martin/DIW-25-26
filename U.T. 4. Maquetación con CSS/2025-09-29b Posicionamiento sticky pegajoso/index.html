@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --color-fondo: lightcoral;
+            --ancho-galeria: 400px;
+            --ancho-borde: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            min-height: 100dvh;
+            background-color: var(--color-fondo);
+        }
+
+        .galeria {
+            border: solid var(--ancho-borde) chartreuse;
+            /* width: var(--ancho-galeria); */
+            /* width: 420px; */
+            width: calc( var(--ancho-galeria) + 2 * var(--ancho-borde));
+            /* aspect-ratio: 16/9; */
+            height: calc( var(--ancho-galeria) / 16 * 9 + 2 * var(--ancho-borde) );
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            overflow-x: auto;
+        }
+
+        img {
+            width: var(--ancho-galeria);
+            height: calc( var(--ancho-galeria) / 16 * 9 );
+            /* aspect-ratio: 16/9; */
+            /* position: sticky;
+            top: 0; */
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Coches</h1>
+
+    <div class="galeria">
+        <img src="./imagenes/coche01.webp" alt="Coche 1" title="Coche 1">
+        <img src="./imagenes/coche02.webp" alt="Coche 2" title="Coche 2">
+        <img src="./imagenes/coche03.webp" alt="Coche 3" title="Coche 3">
+        <img src="./imagenes/coche04.jpg" alt="Coche 4" title="Coche 4">
+        <img src="./imagenes/coche05.png" alt="Coche 5" title="Coche 5">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+:root {
+    --color-fondo: lightblue; /* variable CSS */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: solid;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: var(--color-fondo);
+}
+
+p.mensaje {
+    /* display: none; */
+    background-color: gold;
+    width: 400px;
+    height: 200px;
+}
+
+.dos {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+
+table {
+    display: inline;
+}
+
+a {
+    display: block;
+}

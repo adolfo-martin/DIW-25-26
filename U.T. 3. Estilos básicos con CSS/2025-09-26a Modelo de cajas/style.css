@@ -1,0 +1,33 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --color-fondo: #add8e6;
+    font-size: 16px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    /* overflow: hidden; desbordamiento */
+}
+
+p {
+    text-align: justify; /* justificar es alinear a ambos lados */
+    border-style: solid;
+    border-width: 20px;
+    /* border-top-color: red;
+    border-right-color: green;
+    border-bottom-color: blue;
+    border-left-color: yellow; */
+    border-color: red green blue yellow;
+    margin: 50px 100px;
+    padding: 20px 40px 60px 80px;
+    background-color: cyan;
+    background-image: url(./pattern.png);
+    background-size: 100px;
+    color: darkorange;
+}
