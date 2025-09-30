@@ -1,0 +1,37 @@
+.box {
+    width: 150px;
+    height: 150px;
+}
+
+.box-blue {
+    background-color: blue;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-property: background-color;
+    transition-delay: 1000ms;
+}
+
+.box-blue:hover {
+    width: 300px;
+    background-color: red;
+}
+
+fieldset {
+    font-size: 3rem;
+}
+
+input[type=radio] {
+    accent-color: green;
+    /* scale: 2; */
+    zoom: 2;
+}
+
+input[type=radio]:checked + label {
+    border-bottom: solid 30px green;
+}
+
+label {
+    font-size: 0.8em;
+    transition-duration: 1000ms;
+    border-bottom: solid 0px red;
+}

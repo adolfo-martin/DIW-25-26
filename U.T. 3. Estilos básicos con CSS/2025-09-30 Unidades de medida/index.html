@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            font-size: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            border: solid 10px chartreuse;
+            min-height: 100dvh;
+        }
+
+        .contenedor {
+            background-color: salmon;
+            height: 100px;
+            width: 100mm;
+        }
+
+        .contenedor-uno {
+            background-color: red;
+            height: 5rem; /* 5 * 20px = 100px*/
+            width: 50%;
+        }
+
+        .contenedor-dos {
+            background-color: green;
+            height: 1em;
+            width: 50%;
+        }
+
+        .contenedor-tres {
+            margin-top: 50px;
+            background-color: lightblue;
+            font-size: 2rem;
+        }
+
+        .contenedor-tres>h1 {
+            font-weight: normal;
+            font-size: 1em;
+        }
+
+        .contenedor-tres>h2 {
+            font-weight: 100;
+            font-size: 0.7em;
+        }
+
+        .contenedor-tres>p {
+            font-size: 0.4em;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Unidades de medida 📏📐</h1>
+
+    <h2>Unidades absolutas</h2>
+
+    <ul>
+        <li>Pixel (px)</li>
+        <li>Punto (pt)</li>
+        <li>Centímetro (cm)</li>
+        <li>Milímetro (mm)</li>
+    </ul>
+
+    <div class="contenedor"></div>
+
+    <h2>Unidades relativas</h2>
+
+    <!-- Etiqueta para lista de definiciones -->
+    <dl>
+        <!-- Término -->
+        <dt>% el porcentaje</dt>
+        <!-- Defininición -->
+        <dd>Se usa para declarar que el grosor se expresa como un porcentaje del grosor del padre.</dd>
+
+        <dt>dvh dynamic viewport height</dt>
+        <dd>Altura del dispositivo restando lo que muestre el ordenador o el móvil. 
+            El profesor normalmente solo la usa en la etiqueta body. En el resto de etiquetas emplea %.
+        </dd>
+
+        <dt>dvw dynamic viewport width</dt>
+        <dd>Anchura del dispositivo restando lo que muestre el ordenador o el móvil.</dd>
+
+        <dt>rem Root em</dt>
+        <dd>Tamaño relativo al tamaño base establecido en :root. Por defecto es 16px.</dd>
+
+        <dt>em </dt>
+        <dd>Tamaño relativo al tamaño rem o em de la etiqueta padre</dd>
+    </dl>
+
+    <div class="contenedor-uno">
+        <div class="contenedor-dos"></div>
+    </div>
+
+    <div class="contenedor-tres">
+        <h1>titulo</h1>
+        <h2>subtitulo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dignissimos.</p>
+    </div>
+
+
+</body>
+</html>
