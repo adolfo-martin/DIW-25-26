@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 48px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100dvh;
+            display: grid;
+            place-content: center;
+        }
+
+        .button-mensajes {
+            background-color: grey;
+            color: white;
+            border-radius: 40px;
+            padding: 20px 80px 20px 40px;
+            position: relative;
+        }
+
+        .button-mensajes::before {
+            content: attr(data-mensajes-pendientes);
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: red;
+            border-radius: 50%;
+            width: 1.25em;
+            height: 1.25em;
+            font-size: 0.75em;
+            display: grid;
+            place-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="tDivMensajes" class="button-mensajes" data-mensajes-pendientes="0">Mensajes</div>
+
+    <script>
+        const nDiv = document.getElementById('tDivMensajes');
+        // nDiv.setAttribute('data-mensajes-pendientes', 1)
+        // nDiv.dataset.mensajesPendientes = 2;
+        
+        let contador = 0;
+        nDiv.dataset.mensajesPendientes = contador;
+
+        setInterval(
+            () => nDiv.dataset.mensajesPendientes = ++contador
+            , 2000
+        );
+    </script>
+</body>
+</html>

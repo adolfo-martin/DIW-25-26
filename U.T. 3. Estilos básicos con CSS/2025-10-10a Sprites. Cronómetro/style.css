@@ -1,0 +1,8 @@
+.numero {
+    border: solid;
+    width: 90px;
+    height: 90px;
+    background-image: url(./numeros.png);
+    background-repeat: no-repeat;
+    background-position-x: -810px;
+}

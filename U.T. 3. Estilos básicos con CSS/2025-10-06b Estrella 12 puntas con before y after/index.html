@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100dvh;
+            display: grid;
+            place-content: center;
+        }
+
+        .estrella {
+            width: 200px;
+            height: 200px;
+            border: solid 20px blue;
+            position: relative;
+        }
+
+        .estrella::before, .estrella::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: inherit;
+            box-sizing: unset;
+            left: -20px;
+            top: -20px;
+        }
+        
+        .estrella::before {
+            rotate: 30deg;
+        }
+
+        .estrella::after {
+            rotate: 60deg;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="estrella"></div>
+</body>
+</html>

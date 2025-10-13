@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --ancho: 1920px;
+            --alto: 1080px;
+            --tercio: calc(var(--ancho) / 3);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: pink;
+            min-height: 100dvh;
+        }
+
+        .coche {
+            width: var(--ancho);
+            height: var(--alto);
+            background-image: url(./ferrari-testarossa.webp);
+            position: relative;
+        }
+
+        .coche::after, .coche::before {
+            content: "";
+            width: var(--tercio);
+            height: inherit;
+            position: absolute;
+            background-image: inherit;
+            background-repeat: no-repeat;
+        }
+        
+        .coche::after{
+            filter: sepia();
+            right: 0;
+            background-position-x: right;
+        } 
+
+        .coche::before {
+            filter: grayscale();
+            inset: 0;
+            margin: auto;
+            background-position-x: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="coche"></div>
+</body>
+</html>
