@@ -1,0 +1,43 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+section {
+    border: solid;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+
+    /* alineación dirección principal */
+    justify-content: space-between; 
+
+    /* alineación dirección secundaria */
+    align-items: center;
+}
+
+article {
+    border: solid;
+    background-color: deepskyblue;
+}
+
+article:first-child {
+    align-self: flex-start;
+}
+
+article:last-child {
+    align-self: flex-end;
+}
+
+article:nth-child(2) {
+    align-self: flex-end;
+}

@@ -1,0 +1,91 @@
+/* la maquetación flexible siempre es una relación padre-hijo */
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+nav.menu-1 {
+    margin: 1rem 0 1rem 0;
+    background-color: lightblue;
+}
+
+.menu-1 ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.menu-1 li {
+    /* border: solid; */
+    flex: 1 1 0;
+    text-align: center;
+}
+
+.menu-1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    border: solid;
+    display: flex;
+    padding: 1rem 0 1rem 0;
+}
+
+article {
+    border: solid;
+    /* Grosor en la dirección principal */
+    flex-basis: 0;
+    /* Como se reparte el espacio que sobra en el padre en la dirección principal */
+    flex-grow: 1;
+    /* Como se reduce cada uno de los hijos en la dirección principal cuando falta espacio */
+    flex-shrink: 1;
+}
+
+/* article:first-child {
+    flex-grow: 2;
+}
+
+article:nth-child(2) {
+    flex-grow: 3;
+} */
+
+/* article:last-child {
+    flex-shrink: 1000;
+} */
+
+nav.menu-2 {
+    margin: 1rem 0 1rem 0;
+}
+
+.menu-2 ul {
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.menu-2 li {
+    /* border: solid; */
+    flex: 1 1 0;
+}
+
+.menu-2 a {
+    text-decoration: none;
+    background-color: lightblue;
+    color: inherit;
+    /* border: solid 5px white; */
+    text-align: center;
+    display: block;
+}
