@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100dvh;
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+article {
+    flex-grow: 1;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    justify-items: center;
+
+    &>div {
+        background-color: white;
+        position: absolute;
+        bottom: 50px;
+        width: 100px;
+        height: 100px;
+    }
+
+    &.carrito {
+        background-image: url('./imagenes/carrito.jpg');
+    }
+    &.chica {
+        background-image: url('./imagenes/chica.jpg');
+    }
+    &.gato {
+        background-image: url('./imagenes/gato.jpg');
+    }
+    &.tranvia {
+        background-image: url('./imagenes/tranvia.jpeg');
+    }
+    &.papiroflexia {
+        background-image: url('./imagenes/papiroflexia.jpg');
+    }
+}
+
