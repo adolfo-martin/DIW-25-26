@@ -1,0 +1,39 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: black;
+    background-image: radial-gradient(red, green, blue, yellow, magenta, cyan);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-reflejado {
+    font-weight: bold;
+    font-size: 4rem;
+    position: relative;
+
+    &::before {
+        content: attr(data-texto);
+        font-weight: bold;
+
+        background-image: linear-gradient(black, 70%, white);
+        color: transparent;
+        background-clip: text;
+
+        position: absolute;
+        bottom: -50px;
+        transform: rotateX(0.5turn)
+    }
+}

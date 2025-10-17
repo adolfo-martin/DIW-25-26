@@ -1,0 +1,91 @@
+@font-face {
+    font-family: Roboto;
+    src: url(./Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+:root {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+Al poner la altura del body exacta a 100dvh no aparece la barra de scroll en el body.
+En la etiqueta que si queremos que tenga scroll ponemos overflow-y.
+*/
+
+body {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+main {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.parallax {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* efecto Parallax */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax__title {
+    color: #fff;
+    background-color: #00000066;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1ch;
+
+}
+
+.parallax:not(:first-child)>.parallax__title {
+    background-color: transparent;
+}
+
+.parallax-one {
+    background-image: url(./images/the-mandalorian-01.jpg);
+}
+
+.parallax-two {
+    background-image: url(./images/the-mandalorian-02.jpg);
+}
+
+.parallax-three {
+    background-image: url(./images/the-mandalorian-03.jpg);
+}
+
+article {
+    &>header {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 2rem;
+        background-color: white;
+        color: black;
+    }
+
+    &>p {
+        text-align: center;
+        padding: 2rem 10rem;
+    }
+}
