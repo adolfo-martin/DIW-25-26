@@ -1,0 +1,62 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    padding: 10px;
+    background-color: lightblue;
+    /* display: inline-grid; */
+    display: grid;
+    gap: 10px;
+    grid-auto-rows: 100px;
+
+    /* grid-template-columns: 100px 4fr 100px 1fr 100px; */
+    /* grid-template-columns: 100px 100px 100px 100px 100px; */
+    /* grid-template-columns: repeat(2, 100px) 1fr repeat(2, 100px); */
+    grid-template-columns: repeat(5, 100px);
+}
+
+.box {
+    border: solid 1px;
+
+
+    &:nth-child(2) {
+        background-color: red;
+    }
+
+    &:nth-child(7) {
+        background-color: green;
+        /* grid-column-start: 2;
+        grid-column-end: 5; */
+        /* grid-column: 2/ 5; */
+        grid-column: 2/ span 3;
+    }
+
+    &:nth-child(12) {
+        background-color: blue;
+        grid-column: 2 / span 3;
+        grid-row: span 4;
+    }
+
+    &:nth-child(15) {
+        background-color: magenta;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 10;
+        grid-row-end: 15;
+    }
+
+    &:nth-child(20) {
+        background-color: chartreuse;
+        grid-column: 2 / span 3;
+        grid-row: 18 / span 3;
+    }
+}
