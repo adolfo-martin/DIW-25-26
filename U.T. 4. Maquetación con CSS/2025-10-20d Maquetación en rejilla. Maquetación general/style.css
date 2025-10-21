@@ -13,11 +13,34 @@ body {
     height: 100dvh;
     display: grid;
     grid-template-columns: 100px 1fr 100px;
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-rows: auto 1fr auto;
 }
 
 header {
-    grid-column: span 3;
     background-color: black;
     color: white;
+    grid-column: 1 / span 3;
+}
+
+aside {
+    background-color: lightgray;
+}
+
+aside:nth-child(2) {
+    grid-column: 1;
+}
+
+aside:nth-child(3) {
+    grid-column: 3;
+}
+
+main {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    grid-column: 1 / span 3;
 }

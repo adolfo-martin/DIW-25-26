@@ -1,0 +1,135 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100dvh;
+    background-color: chartreuse;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 10px;
+    gap: 10px;
+}
+
+.display,
+.number,
+.operator {
+    font-weight: bold;
+    font-size: 5rem;
+    display: grid;
+}
+
+.number,
+.operator {
+    display: grid;
+    place-content: center;
+    color: white;
+}
+
+.display {
+    background-color: white;
+    place-content: center;
+    justify-content: flex-end;
+    grid-column: 1 / span 4;
+    padding-right: 1rem;
+}
+
+.number {
+    background-color: burlywood;
+
+    &.number-0 {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    &.number-1 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    &.number-2 {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    &.number-3 {
+        grid-column: 3;
+        grid-row: 4;
+    }
+
+    &.number-4 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    &.number-5 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    &.number-6 {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    &.number-7 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    &.number-8 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    &.number-9 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
+
+.operator {
+    background-color: coral;
+
+    &.operator-add {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    &.operator-substrat {
+        grid-column: 4;
+        grid-row: 3;
+    }
+
+    &.operator-multiply {
+        grid-column: 4;
+        grid-row: 4;
+    }
+
+    &.operator-divide {
+        grid-column: 4;
+        grid-row: 5;
+    }
+
+    &.operator-result {
+        grid-column: 2 / span 2;
+        grid-row: 5;
+    }
+}
+
+
+@media screen and (min-width: 451px) {
+    body {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
