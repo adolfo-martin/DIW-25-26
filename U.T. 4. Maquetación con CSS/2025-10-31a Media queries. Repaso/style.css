@@ -1,0 +1,21 @@
+/* mobile */
+body {
+    background-color: black;
+    color: orange;
+}
+
+/* tablet */
+@media screen and (width > 450px) { /* breakpoint */
+    /* body {
+        background-color: black;
+        color: orange;
+    } */
+}
+
+/* monitor */
+@media screen and (width > 800px) {
+    body {
+        background-color: orange;
+        color: black;
+    }
+}

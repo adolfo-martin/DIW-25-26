@@ -1,0 +1,28 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: red;
+}
+
+
+@media screen and (min-width: 451px) { /* tabletas */
+    body {
+        background-color: green;
+    }
+}
+
+@media screen and (min-width: 801px) { /* monitores */
+    body {
+        background-color: blue;
+    }
+}

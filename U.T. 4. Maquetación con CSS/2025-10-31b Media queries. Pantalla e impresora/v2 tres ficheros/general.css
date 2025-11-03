@@ -1,0 +1,12 @@
+@import url(./monitor.css) screen;
+@import url(./impresora.css) print;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+}

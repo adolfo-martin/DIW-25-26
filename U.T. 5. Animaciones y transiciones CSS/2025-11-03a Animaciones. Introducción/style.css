@@ -1,0 +1,109 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: black;
+}
+
+.cuadrado-azul {
+    background-color: blue;
+    width: 200px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    /* left: 100px;
+    top: 100px; */
+    z-index: 2;
+
+    animation-name: movimiento-cuadrado-azul;
+    animation-duration: 3000ms;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes movimiento-cuadrado-azul {
+    from {
+        left: 400px;
+        top: 400px;
+    }
+    to {
+        left: 1700px;
+        top: 800px;
+    }
+}
+
+.cuadrado-amarillo {
+    background-color: yellow;
+    width: 125px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    left: 400px;
+    top: 400px;
+    z-index: 3;
+    rotate: 45deg;
+
+    animation-name: cambio-color, movimiento-cuadrado-azul;
+    animation-duration: 2s, 1500ms;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite, 3;
+    animation-direction: alternate;
+}
+
+@keyframes cambio-color {
+    from {
+        background-color: coral;
+    }
+    to {
+        background-color: chartreuse;
+    }
+}
+
+.circulo-rojo {
+    background-color: red;
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+
+    animation-name: movimiento-circulo-rojo;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@keyframes movimiento-circulo-rojo {
+    0% {
+        left: 100px;
+        top: 100px;
+        background-color: red;
+    }
+    25% {
+        left: 1000px;
+        top: 100px;
+    }
+    50% {
+        left: 1000px;
+        top: 800px;
+    }
+    75% {
+        left: 100px;
+        top: 800px;
+    }
+    100% {
+        left: 100px;
+        top: 100px;
+        background-color: pink;
+    }
+}

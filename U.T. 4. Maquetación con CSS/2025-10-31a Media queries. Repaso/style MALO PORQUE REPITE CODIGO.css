@@ -1,0 +1,27 @@
+/* MAL  */
+/* mobile */
+/* @media screen and (max-width: 450px) { */
+@media screen and (width <= 450px) {
+    body {
+        background-color: black;
+        color: orange;
+    }
+}
+
+/* tablet */
+/* @media screen and (min-width: 451px) and (max-width: 800px) { */
+@media screen and (450px < width <= 800px) {
+    body {
+        background-color: black;
+        color: orange;
+    }
+}
+
+/* monitor */
+/* @media screen and (min-width: 801px) { */
+@media screen and (width > 800px) {
+    body {
+        background-color: orange;
+        color: black;
+    }
+}
