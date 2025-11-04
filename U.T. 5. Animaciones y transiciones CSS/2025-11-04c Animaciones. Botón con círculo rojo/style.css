@@ -1,0 +1,57 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+}
+
+.button {
+    font-size: 4rem;
+    background-color: black;
+    color: white;
+    padding: 1rem 4rem;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    display: grid;
+    place-items: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: red;
+        display: inline-block;
+        width: 450px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        animation: grow 1s linear normal both;
+        z-index: -1;
+    }
+}
+
+.not-clicked {
+    &::before {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes grow {
+    from {
+        scale: 0;
+    }
+    to {
+        scale: 1;
+    }
+}

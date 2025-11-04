@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module">
+        const boton = document.querySelector('.boton');
+        // boton.addEventListener('click', e => {
+        //     const pelota = document.querySelector('.pelota');
+        //     /* Para acceder al CSS de una etiqueta desde JavaScript la 
+        //        primera forma es con la propiedad style */
+        //     pelota.style.animationPlayState = 'running';
+        // });
+
+        boton.addEventListener('click', e => {
+            const pelota = document.querySelector('.pelota');
+            /* Todas las etiquetas tienen la propiedad classList que ofrece 
+               métodos para manipular el atributo class. */
+            // if (pelota.classList.contains('parada'))
+            //     pelota.classList.remove('parada');
+            // else 
+            //     pelota.classList.add('parada');
+            pelota.classList.toggle('parada');
+        });
+    </script>
+</head>
+<body>
+    <div class="boton"></div>
+    <div class="pelota parada"></div>
+</body>
+</html>
