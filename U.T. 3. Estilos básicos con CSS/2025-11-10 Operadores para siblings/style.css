@@ -1,0 +1,13 @@
+table, tr, th, td {
+    border: solid;
+    border-collapse: collapse;
+}
+
+[name=continente] {
+    display: none;
+}
+
+input[name=continente]:checked ~ p {
+    font-weight: bold;
+    color: red;
+}

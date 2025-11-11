@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script type="module">
+        // document.querySelector('button')
+        //     .addEventListener('click', _ => {
+        //         document.querySelector('form').submit();
+        //     });
+    </script>
+</head>
+<body>
+    <form action="./login.php">
+        <header>Autenticación de usuario</header>
+
+        <label for="">Usuario (email)</label>
+        <input type="email" name="email" id="" required size="40ch">
+        <div class="error">Introduzca un correo electrónico válido.</div>
+
+        <label for="">Contraseña</label>
+        <input type="password" name="password" id="" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$">
+        <div class="error">Introduzca una contraseña que cumpla los criterios de complejidad.</div>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

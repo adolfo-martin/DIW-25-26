@@ -1,0 +1,56 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+}
+
+.contador {
+    position: absolute;
+}
+
+.watch-needle-second {
+    animation: giro 1s linear 3;
+    transform-origin: right;
+}
+
+@keyframes giro {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.ball {
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    right: 100px;
+    animation: movimiento 3s ease-in both;
+    /* animation-delay: 5s; */
+    animation-play-state: paused;
+}
+
+@keyframes movimiento {
+    from {
+        top: 10%;
+    }
+    to {
+        top: 80%;
+    }
+}
