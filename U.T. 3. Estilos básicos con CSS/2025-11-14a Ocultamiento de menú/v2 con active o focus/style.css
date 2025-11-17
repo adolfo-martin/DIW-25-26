@@ -1,0 +1,66 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+
+body:has(.button-menu:focus) {
+    overflow: hidden;
+}
+
+
+header {
+    border: solid;
+    display: flex;
+    height: 3rem;
+
+    :first-child {
+        flex-grow: 1;
+    }
+}
+
+.button-menu {
+    /* display: none; */
+    position: absolute;
+    left: -1000000000px;
+    z-index: 100000000;
+    pointer-events: none;
+}
+
+.button-menu:not(:focus)+nav {
+    display: none;
+    left: -100dvw;
+}
+
+.button-menu:focus+nav {
+    display: block;
+    z-index: 10000;
+    height: 100dvh;
+    width: 100dvw;
+    position: absolute;
+    top: 0;
+    left: 0dvw;
+    color: white;
+    background-color: #0000ff80;
+    transition-duration: 500ms;
+    transition-property: left;
+    transition-timing-function: linear;
+
+    ul {
+        height: 100%;
+        width: 25%;
+        background-color: #0000ff;
+    }
+
+}

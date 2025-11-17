@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        form {
+            background-color: aqua;
+            display: inline-block;
+            padding: 1rem;
+        }
+
+        *:focus {
+            border: solid 20px blue;
+        }
+    </style>
+
+    <script type="module">
+        setTimeout(() => 
+            document.querySelector('[type=password]').focus()
+        , 5000);
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="">Usuario</label>
+        <input type="text">
+        <br>
+        <label for="">Contraseña</label>
+        <input type="password">
+    </form>
+</body>
+</html>
