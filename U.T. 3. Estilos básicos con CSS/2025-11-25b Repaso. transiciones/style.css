@@ -1,0 +1,77 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    /* display: grid;
+    place-content: center; */
+}
+
+.mensaje {
+    font-size: 10rem;
+    background-color: darkgreen;
+    color: gold;
+    transition-duration: 2s;
+    /* transition-property: height background-color; */
+    height: 200px;
+}
+
+.mensaje:hover {
+    height: 500px;
+    background-color: red;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+
+    a {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        color: green;
+        text-decoration: none;
+        transition: 1s;
+        transition-property: background-color, color;
+    }
+
+    a:focus {
+        background-color: darkgrey;
+        color: chartreuse;
+    }
+    
+    a:hover {
+        background-color: darkgrey;
+        color: chartreuse;
+    }
+}
+
+a:target + h1 {
+    color: red;
+}
+
+a:target + h1 + p {
+    display: block;
+    height: auto;
+    color: black;
+    overflow: hidden;
+}
+
+.parrafo {
+    height: 0px;
+    /* display: none; */
+    transition-duration: 1s;
+    transition-property: height;
+    color: transparent;
+}

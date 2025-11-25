@@ -1,0 +1,64 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: green;
+}
+
+.palo-golf {
+    background-color: yellow;
+    width: 20px;
+    height: 300px;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    transform-origin: top;
+    animation-name: golpe-palo;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+.bola-golf {
+    background-color: white;
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10%;
+    animation-name: movimiento-bola;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes golpe-palo {
+    0% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(3deg);
+    }
+}
+
+@keyframes movimiento-bola {
+    from {
+        left: 20%;
+    }
+    to {
+        left: 80%;
+    }
+}

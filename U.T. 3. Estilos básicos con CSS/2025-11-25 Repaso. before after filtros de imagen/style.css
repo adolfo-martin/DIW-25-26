@@ -1,0 +1,51 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+.paisaje {
+    /* --ancho: 1920px;
+    --alto: 1080px; */
+
+    --ancho: 500px;
+    --alto: calc(500px / 16 * 9);
+
+    --un-tercio: calc(var(--ancho) / 3);
+    background-image: url(./paisaje-campestre.jpg);
+    background-size: cover;
+    width: var(--ancho);
+    height: var(--alto);
+    position: relative;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        width: var(--un-tercio);
+        height: inherit;
+        background-image: inherit;
+        background-repeat: no-repeat;
+        background-size: inherit;
+    }
+    
+    &::before {
+        filter: grayscale();
+        left: var(--un-tercio);
+        background-position-x: center;
+    }
+
+    &::after {
+        filter: sepia();
+        right: 0;
+        background-position-x: right;
+    }
+}
