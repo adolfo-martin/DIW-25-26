@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de los CDN de Tailwind CSS</title>
+
+    <!-- CDN de Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        adolfo: '#dd0055',
+                    }
+                }
+            }
+        }
+    </script> -->
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-adolfo: #da373d;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-3xl text-indigo-800 text-center bg-indigo-50 p-2 font-bold">
+        Framework Tailwind CSS
+    </h1>
+
+    <h2 class="text-xl text-adolfo p-4">En el día de hoy empezamos con Tailwind.</h2>
+</body>
+
+</html>
