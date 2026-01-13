@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="h-dvh grid grid-rows-[auto_1fr_auto]
+    sm:grid-cols-[auto_1fr_auto] sm:grid-rows-[auto_auto_1fr_auto]
+    md:grid-cols-[150px_auto_1fr_150px] md:grid-rows-[auto_1fr_auto]
+">
+    <header class="bg-green-600
+        sm:col-start-2 sm:row-start-1
+        md:col-span-2 
+    ">Region de Murcia</header>
+    
+    <aside class="bg-red-600 hidden
+        sm:block sm:col-start-1 sm:row-start-1 sm:row-span-4 
+        sm:[writing-mode:vertical-rl] sm:text-center
+    ">publicidad 1</aside>
+
+    <nav class="bg-blue-800 hidden
+        sm:block sm:col-start-2 sm:row-start-2
+        md:col-start-2 md:row-start-2
+    ">
+        <ul class="flex gap-2 p-2
+            md:h-full md:flex-col
+        ">
+            <li class="bg-amber-200 grow"><a href="">Opción 1</a></li>
+            <li class="bg-amber-200 grow"><a href="">Opción 2</a></li>
+            <li class="bg-amber-200 grow"><a href="">Opción 3</a></li>
+            <li class="bg-amber-200 grow"><a href="">Opción 4</a></li>
+            <li class="bg-amber-200 grow"><a href="">Opción 5</a></li>
+        </ul>
+    </nav>
+
+    <main class="bg-amber-200 grid grid-rows-5
+        sm:col-start-2 sm:row-start-3
+        sm:grid-cols-3 sm:grid-rows-3
+        md:col-start-3 md:row-start-2
+    ">
+        <article class="bg-amber-500
+            sm:col-span-3">
+            <h2>Ciudad de</h2>
+        </article>
+        <article class="bg-purple-300
+            sm:col-span-3">
+            <h2>Ciudad de</h2>
+        </article>
+        <article class="bg-teal-200">
+            <h2>Ciudad de</h2>
+        </article>
+        <article class="bg-gray-300">
+            <h2>Ciudad de</h2>
+        </article>
+        <article class="bg-blue-200">
+            <h2>Ciudad de</h2>
+        </article>
+
+    </main>
+
+    <aside class="bg-red-600 hidden
+        sm:block sm:col-start-3 sm:col-row-1 sm:row-span-4
+        sm:[writing-mode:vertical-rl] sm:text-center
+        md:col-start-4
+    ">publicidad 2</aside>
+
+    <footer class="bg-green-400
+        md:col-start-2 md:col-span-2 md:row-star-3
+    ">
+        pie
+    </footer>
+
+</body>
+</html>

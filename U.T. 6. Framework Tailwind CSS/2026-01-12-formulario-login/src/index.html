@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-blue-50 h-dvh grid place-content-center">
+    
+    <form class="bg-blue-200 inline-grid p-4 gap-4 rounded-xl group/formulario
+        sm:grid-cols-[auto_auto]
+    ">
+        <header class="font-bold text-center text-xl
+            sm:col-span-2
+        ">Autenticación de usuarios</header>
+
+        <label class="text-right">Usuario:</label>
+        <input type="email" required class="border-2 invalid:border-red-500 peer/username">
+        <div class="text-red-500 peer-valid/username:hidden
+            sm:col-span-2
+        ">El nombre de usuario es obligatorio.</div>
+
+        <label class="text-right">Contraseña:</label>
+        <input type="password" required class="border-2 invalid:border-red-500 peer/password">
+        <div class="text-red-500 peer-valid/password:hidden
+            sm:col-span-2
+        ">La contraseña es obligatoria.</div>
+
+        <button type="button" class="bg-blue-950 text-white group-hover/formulario:font-bold
+            sm:col-span-2
+        ">Validar</button>
+    </form>
+
+    <br><br>
+    <form class="bg-blue-200 inline-grid p-4 gap-4 rounded-xl group/formulario
+        sm:grid-cols-[auto_auto]
+        *:[label]:text-blue-700
+    ">
+        <header class="font-bold text-center text-xl
+            sm:col-span-2
+        ">Autenticación de usuarios</header>
+
+        <label class="text-right">Usuario:</label>
+        <input type="email" required class="border-2 invalid:border-red-500 valid:[&+div]:hidden">
+        <div class="text-red-500
+            sm:col-span-2
+        ">El nombre de usuario es obligatorio.</div>
+
+        <label class="text-right">Contraseña:</label>
+        <input type="password" required class="border-2 invalid:border-red-500 peer/password">
+        <div class="text-red-500 peer-valid/password:hidden
+            sm:col-span-2
+        ">La contraseña es obligatoria.</div>
+
+        <button type="button" class="bg-blue-950 text-white group-hover/formulario:font-bold
+            sm:col-span-2
+        ">Validar</button>
+    </form>
+
+</body>
+</html>
